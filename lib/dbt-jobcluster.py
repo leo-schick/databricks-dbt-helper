@@ -4,6 +4,14 @@
 # MAGIC
 # MAGIC #### Required environment variables
 # MAGIC - `DBT_PROJECT_NAME` - the project name of the project
+# MAGIC - `DBT_PROJECT_DIR` - the path where the dbt project shall be saved locally. Suggestion: `DBT_PROJECT_DIR=/tmp/dbt_project`
+# MAGIC - `DBT_PROJECT_GIT_REPOSITORY` - the git repository containing the dbt project to be cloned.
+# MAGIC
+# MAGIC #### Optional environment variables
+# MAGIC - `DBT_REPOSITORY_REF` - the git reference to be cloned. If not set, `prod` is taken as production branch name.
+# MAGIC - `DBT_GITHUB_SSH_PRIVATE_KEY` - the raw code of a SSH key. If set, the SSH key will be placed at `~/.ssh/github_id` and the ssh config will be created for host github.com.
+# MAGIC - `DBT_CORE_VERSION` - the package version of `dbt-core` to be installed when not already installed (e.g. via dependencies in a workflow task). If not set, 1.7.10 is taken.
+# MAGIC - `DBT_DATABRICKS_VERSION` - the package version of `dbt-databricks` to be installed when not already installed (e.g. via dependencies in a workflow task). If not set, 1.7.9 is taken.
 
 # COMMAND ----------
 
